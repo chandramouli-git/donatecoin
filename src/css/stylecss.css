@@ -1,0 +1,21 @@
+
+body
+{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+#header1
+{
+    color:red;  
+}
+a{
+
+    margin-right:20%;;
+    text-decoration: none;
+    background-color: green;
+    color:honeydew;
+    
+}
+
+
