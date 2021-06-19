@@ -6,7 +6,7 @@
   "directories": {
     "test": "test"
   },
-  "scripts": { "start": "node app.js"},
+  "scripts": { "start": "node app.js",
     "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
