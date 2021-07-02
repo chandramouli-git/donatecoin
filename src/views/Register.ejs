@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>
+            Register here to donate
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+    
+    $(document).ready(function(){
+
+    $("#s1").click(function(){
+        $("#hidd").hide();
+        var y=document.getElementsByTagName("div");
+        var x=document.getElementsByTagName("input");
+        
+        var temp=0;
+        for(var i=0;i<3;i++)
+        {
+            if(x[i].value=="")
+            {
+                 y[i].style.visibility="visible";
+                 temp=1;
+            }
+            else
+            y[i].style.visibility="hidden";
+        }
+        if(temp==0)
+        {
+            if(document.getElementById('pa1').value==document.getElementById('pa2').value){
+                document.getElementsByTagName("div")[3].style.visibility="hidden";
+            $("#hidd").show();
+            $.ajax({
+          type: "POST",
+          contentType: "application/json ; charset=utf-8",
+          url: "http://localhost:3000/",
+          dataType: "json",
+        data: JSON.stringify({id:Rcount,username: x[0].value,password:x[1].value})
+          
+  
+  });
+        }
+    else{
+        document.getElementsByTagName("div")[3].style.visibility="visible";
+    }      }
+          
+    });
+    $("#s2").click(function(){
+        document.getElementById("f2").style.visibility="visible";
+    });
+});
+    </script>
+    <script>
+        
+    </script>
+<style>
+#p1
+{
+   color: crimson;
+   visibility: hidden;
+}
+b
+{
+    color:chartreuse
+}
+#f2
+{
+    visibility:hidden;
+}
+</style>
+    </head>
+    <body>
+        <b id="hidd" hidden>Registration sucessfull</b>
+        <h1>Please fill the below form</h1>
+        <form >
+            <p>USER ID<br>
+                <input type='text' name="ID" value="" required>
+            </p>
+            <div id="p1" >
+                fill this Jackass
+            </div>
+            <p>
+                Set Password<br>
+                <input id="pa1" type='password' name="pass1" value="" >
+            </p>
+            <div id="p1">
+                fill this Jackass
+            </div>
+            <p>
+                Confirm Password<br>
+                <input id='pa2' type='password' name="pass2" value="" >
+            </p>
+            <div id="p1" >
+                fill this Jackass
+            </div>
+            <p>
+                <input id='s1' type="button" value="REGISTER" name="Reg"> 
+            </p>
+            <div id="p1" >
+                Passwords Mismatch
+            </div>
+        </form>
+        <a href="login">LOGIN</a>
+        
+    </body>
+</html>
