@@ -5,7 +5,7 @@ const { document } = (new JSDOM('')).window;
 global.document = document;
 
 var $ = jQuery = require('jquery')(window);
-
+let port=process.env.PORT || 3000;
 var bodyp=require('body-parser');
 var express= require('express');
 var app=express();
@@ -93,7 +93,7 @@ app.get('/check/:data',function(req,res)
 
 
 
-app.listen(3000);
+app.listen(port);
 
 
 
