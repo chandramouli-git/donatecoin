@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="asset/mainjs.js"></script>
+<script>
+  var A="<%= arr %>";
+  var array=A.split(',');
+  var A1="<%= arr1 %>";
+  var array1=A1.split(',');
+ // console.log(array[0]);
+  
+  $(function(){
+    var i;
+  for(i=0;i<array.length;i++)
+  {
+  var url="https://etherscan.io/tx/"+array[i];
+  var temp=array[i];
+  var temp1=array1[i];
+  console.log(temp);
+    $('body').append(`<section>
+    <p>
+      LINK : <a href="${url}" >${url}</a>
+    </p>
+    <p>
+        TRANSACTION ID : ${temp}
+      </p>
+      <p>
+          AMOUNT DONATED : ${temp1} ETHER
+      </p>
+  </section>`);}
+  });
+
+  
+
+</script>
+<style>
+  section:nth-child(even)
+  {
+     background-color: orange;
+  }
+  section:nth-child(odd)
+  {
+     background-color: greenyellow;
+  }
+</style>
+<body  style="font-family: 'Courier New', Courier, monospace;">
+  
+  
+  
+
+</body>
+</html>
+

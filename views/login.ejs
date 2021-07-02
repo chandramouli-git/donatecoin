@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>
+            LOGIN 
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script>
+          var A="<%= arr %>";  
+         console.log(A.split(",")[1].split(",")[0]);
+
+
+            $(document).ready(function(){
+    $("#s2").click(function(){
+        var y=document.getElementsByTagName("div");
+        var x=document.getElementsByTagName("input");
+        
+        var temp=0;
+        for(var i=0;i<2;i++)
+        {
+            if(x[i].value=="")
+            {
+                 y[i].style.visibility="visible";
+                 temp=1;
+            }
+            else
+            y[i].style.visibility="hidden";
+        }
+        if(temp==0)
+        {
+            
+            
+              location.replace("http://localhost:3000/main?uname="+document.getElementById("un").value);
+        }        
+    });
+    
+});
+        </script>
+        <style>
+            #p1
+            {
+               color: crimson;
+               visibility: hidden;
+            }
+            b
+            {
+                color:chartreuse
+            }
+           
+            </style>
+    </head>
+   
+    <body>
+    <form id="f2">
+        <p>USERNAME<br>
+            <input id="un" type='text' name="uname" value="" required>
+        </p>
+        <div id="p1" >
+            fill this Jackass
+        </div>
+        <p>
+            Password<br>
+            <input type='password' name="pass1" value="" required>
+        </p>
+        
+        <div id="p1" >
+            fill this Jackass
+        </div>
+        <p>
+            <input id='s2' type="button" value="LOGIN" name="LOG"> 
+        </p>
+
+    </form>
+    </body>
+</html>
