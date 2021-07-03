@@ -5,7 +5,7 @@ const { document } = (new JSDOM('')).window;
 global.document = document;
 
 var $ = jQuery = require('jquery')(window);
-let port=process.env.PORT || 3000;
+let port=process.env.PORT;
 var bodyp=require('body-parser');
 var express= require('express');
 var app=express();
