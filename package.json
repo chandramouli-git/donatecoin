@@ -15,10 +15,7 @@
   "devDependencies": {
     "lite-server": "^2.3.0"
   },
-  "engines": {
-  "node": "0.10.41",
-  "npm": "7.19.1"
-},
+  
   "dependencies": {
     "@truffle/hdwallet-provider": "^1.2.1",
     "body-parser": "^1.19.0",
