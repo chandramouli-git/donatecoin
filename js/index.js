@@ -124,13 +124,13 @@ function log(message) {
          $.ajax({
           type: "POST",
           contentType: "application/json ; charset=utf-8",
-          url: "http://localhost:3000/check?x="+urlParams.get('x'),
+          url: "./check?x="+urlParams.get('x'),
           dataType: "json",
         data: JSON.stringify({id : hash,amt : document.getElementById("amt").value,val:urlParams.get('x')})
           
   
   });
-  location.replace("http://localhost:3000/");
+  location.replace("./main");
 
         });
       });
