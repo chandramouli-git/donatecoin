@@ -21,15 +21,7 @@ log=[];
 app.get('/',function(req,res)
 {
     res.render('Register');
-    connection.query(sql2,function(error,result)
-    {
-        for(var i=0;i<result.length;i++)
-        {
-              log.push([result[i]["userid"],result[i]["username"],result[i]["password"]]);
-        }
-        
-    });
-    console.log(log);
+   
 });
 app.get('/login',function(req,res)
 {
